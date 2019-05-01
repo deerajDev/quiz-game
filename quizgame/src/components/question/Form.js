@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
-
-
+import { addQuestion } from '../../actions/questions';
 
 class Form extends Component {
 
@@ -19,17 +17,11 @@ class Form extends Component {
     })
 
     //on submit of the form, this function will fire
-    onSubmit = e => {
-        e.prventDefaults()
-        console.log(this.state)
-
-
+    onSubmit = (e) => {
+        e.preventDefault()
+        this.props.addQuestion(this.state)
+        this.props.history.push('/')
     }
-
-
-
-
-
 
     render() {
         const { title, description, answer } = this.state
@@ -80,4 +72,4 @@ class Form extends Component {
 
 
 
-export default Form
+export default connect(null, { addQuestion })(Form)

@@ -20,10 +20,7 @@ class NavBar extends Component {
                                 </ul>
 
                                 <span className="navbar-text lead mx-4">
-                                    <NavLink to='/add-task/'>Add Question</NavLink>
-                                </span>
-                                <span className="navbar-text lead mx-4">
-                                    <NavLink to='/'>Question List</NavLink>
+                                    <NavLink to='/add-question/'>Add Question</NavLink>
                                 </span>
 
                             </div>

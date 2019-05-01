@@ -1,16 +1,23 @@
-import { GET_QUESTIONS } from '../actions/types'
+import { GET_QUESTION, ADD_QUESTION } from '../actions/types'
 
 const initialState = {
-    questions: [],
+    question: new Object(),
 }
 
 export default function (state = initialState, action) {
     switch (action.type) {
-        case GET_QUESTIONS:
+        case GET_QUESTION:
+            return ({
+                ...state
+            })
+        case ADD_QUESTION:
+
+
             return ({
                 ...state,
-                questions: action.payload
-            })
+                question: action.payload
+            }
+            )
         default:
             return state
 
